@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css?family=Kanit|Orbitron|Supermercado+One&display=swap');
+
+.Page_Weather{
+    background: url(./img/fondmeteo.jpg);
+    width: 100%;
+    height: 700px;
+    background-color: white; 
+    color: white;
+    border-radius: 20px;
+    border: white solid 1px; 
+    position: relative;
+    display: flex;  
+} 
+
+.ActualSol{
+    justify-content: center;
+    /* font-size: calc(20px + 2vmin);  */
+    align-content: right;
+    margin: 50px;
+    float: right;
+    position:absolute;
+    right: 0;
+}
+       
+.Other_Sols{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-around;   
+    padding-bottom: 20px;
+
+}
+
+.ActualSol h2{
+    color: white;
+    font-size: 4em;
+    font: bold;
+    text-shadow: 2px 2px 2px orange;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+.ActualSol p{
+    font-size: 1.5em;
+    font-family: 'Kanit', sans-serif;
+    padding: 20px;
+
+}
+
+.Other_Sols h2{
+    font-size: 1.5em;
+    font-family: 'Orbitron', sans-serif;
+    height: 50px;
+}
+
+.OneSol {
+    /* background-color: rgba(70, 64, 56, 0.365); */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -3px -6px 2px 0px rgba(80, 49, 39, 0.529);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.ActualSol .OneSol{
+    background-color: transparent;
+    box-shadow: transparent;
+
+}
+
+.ActualSol .OneSol p{
+    padding: 0;
+}
+
+
+.OneSol h3{
+    font-family: 'Kanit', sans-serif;
+    font-size: 2em;
+    font: bold;
+    color: rgb(160, 50, 17)
+}
+
+.weather-icon{
+    size: 50em;
+}

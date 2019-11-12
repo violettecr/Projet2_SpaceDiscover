@@ -1,0 +1,139 @@
+/* 
+    RESET CSS
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@media screen and (max-width: 750px) {
+    .container {
+        padding: 0px 5%;
+    }
+    .ctn_section_index {
+        flex-direction: column;
+    }
+    .ctn_section_index .ctn_txt {
+        padding-left: 0;
+    }
+}
+
+
+/* COMMON CSS */
+
+
+/* 
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Vidaloka', serif;
+ */
+
+*, a, p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	text-decoration: none; 
+	color: #fff; 
+	list-style: none;
+}
+html{
+	scroll-behavior: smooth;
+}
+body {
+	background-color: #0d0c1b;
+}
+.container  {
+	padding: 0 5%;
+}
+a{
+	cursor: pointer;
+}
+
+/* Button */
+
+.btn {
+	display: inline-block;
+	border-radius: 260px;
+	padding: 15px 30px;
+	border: 1px solid #fff;
+	font-weight: 800;
+	font-size: 11px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+.btn:hover {
+	background-color: #cccccc;
+	border: 1px solid #cccccc;
+	color: #000;
+}
+
+/* Decoration Top Header : 1___8 */
+
+.ctn_item_top {
+	display: flex;
+	justify-content: space-between;
+}
+.ctn_item_top > div {
+	display: flex;
+	align-items: baseline;
+	text-align: center;
+}
+.ctn_item_top p {
+	display: inline-block;
+	padding: 13px 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-size: 12px;
+	line-height: initial;
+}
+.ctn_item_top span{
+	display: inline-block;
+	width: 45px; 
+	height: 1px;
+	margin: 0 7px;
+	background-color: #fff;
+}

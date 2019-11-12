@@ -1,0 +1,124 @@
+/*=================--DEBUT--============================= 
+==========--RESET CSS, voir avec Jennifer--==============*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.body {
+  max-height: 500px;
+  overflow: auto;
+}
+/*=================--FIN--===============================
+================--RESET CSS--============================*/
+
+/*=================--DEBUT--=============================
+==========--VERSION IMAGE AVEC BALISE <IMG>--========*/
+#PageGallery {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+#PageGallery img {
+  object-fit: cover;
+  z-index:1;
+  width: 400px;
+  height: 400px;
+  margin: 100px 0;
+  
+}
+
+#PageGallery #structure {
+  display: inline-block;
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+}
+
+#PageGallery #title p{
+  overflow: hidden;
+  text-align: center;
+  z-index: 10;
+  background: transparent;
+  background-color: beige;
+  font-size: 2em;
+  color: black;
+  opacity: 70%;
+  width: 400px;
+  margin: -62px 0px 0 auto;
+}
+
+/*--------fonction LazyLoading-------------*/
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  opacity: 1;
+  transition: opacity 3s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transition: opacity 3s;
+  -moz-transition: opacity 3s;
+  -ms-transition: opacity 3s;
+  -o-transition: opacity 3s;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  color: transparent;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+/*=================--FIN--=============================
+==========--VERSION IMAGE AVEC BALISE <IMG>--========*/

@@ -1,0 +1,27 @@
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.App-header {
+  background: url(./Components/Weather/img/fondmeteo.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: calc(10px + 2vmin); 
+  color: white;
+ }
+
+ /* #dujour{
+  color: rgb(233, 215, 168);
+  align-self: flex-end;
+  padding-right: 20%;
+ } */
+

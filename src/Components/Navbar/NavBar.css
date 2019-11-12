@@ -1,0 +1,107 @@
+#navbar {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 5%;
+	width: 90%;
+	background-color: #000;
+}
+#navbar .ctn_logo_header img {
+	max-width: 45px;
+}
+#navbar nav > ul {
+	position: relative;
+}
+#navbar nav li ul{ 
+	display:none
+}
+#navbar nav li:hover{
+	color: #333;
+}
+#navbar nav ul {
+  display: flex;
+}
+#navbar nav li {
+	padding: 0 20px;
+}
+#navbar li a{
+	font-weight: 800;
+	font-size: 11px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+#navbar nav li:hover ul{
+	display:inline
+}
+#navbar nav .dropdown {
+	position: relative;
+	padding: 0 40px 0 20px;
+}
+#navbar nav .dropdown::after {
+	position: absolute;
+	top: 12px;
+	right: 20px;
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 5px 0 5px;
+	border-color: #ffffff transparent
+	transparent;
+}
+
+#navbar nav .dropdown ul{ 
+	position:absolute; 
+	left: 14px;
+	top: 30px;
+	background:#fff; 
+	z-index: 99;
+}
+#navbar nav .dropdown li{ 
+	padding: 0;
+}
+#navbar nav .dropdown li a{ 
+	min-width:200px;
+	padding:10px 35px; 
+}
+#navbar nav li li a {
+	display: flex;
+	flex-direction: column;
+	color:#333;
+}
+#navbar nav li li a:hover{
+	background:#bdc3c7;
+	background:#FAFBFB
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0 50px;
+    text-align: center;
+}
+.navbar a {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+   
+}
+.navbar .ctn_logo_header {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.navbar img {
+    display: inline-block;
+    width: 50px;
+    margin-right: 15px;
+}
+.navbar .navbar-icon {
+    position: absolute;
+    top: 38px;
+    right: 30px;
+    display: none;
+}
