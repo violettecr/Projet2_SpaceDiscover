@@ -17,7 +17,7 @@ function Footer() {
                 </ul>
             </nav>
             <div className="ctn_go_top">
-                <a href="#Go_top">
+                <a href="#navbar">
                 <img src="https://image.flaticon.com/icons/svg/2240/2240693.svg" alt="Go Top"/>
                 </a>
             </div>

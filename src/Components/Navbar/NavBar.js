@@ -4,45 +4,34 @@ import { Link } from 'react-router-dom';
 import '../Css/Common.css';
 import './NavBar.css';
 
-
-
-function Toogle() {
-  var x = document.getElementById("Toogle");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
+import SpaceDiscover from '../images/SpaceDiscover.png';
 
 class NavBar extends Component {
   render = () => {
     return (
       <div id="navbar">
         <div className="logo">
-          <Link to="/" className="ctn_logo_header">
-            <img src="https://image.flaticon.com/icons/svg/2127/2127535.svg" alt="Space Discover" />
+          <Link to={`${process.env.PUBLIC_URL}/`} className="ctn_logo_header">
+            <img src={SpaceDiscover} alt="Space Discover" />
           </Link>
-        </div> 
+        </div>
 
-        {/* <button onclick="Toogle()">Click Me</button> */}
-
-        <nav id="Toogle">
-          
+        <input type="checkbox" id="menu-toggle"/>
+        <nav id="Toogle"> 
           <ul>
-            <li><Link to="/">Home</Link></li>
+            <li><Link to={`${process.env.PUBLIC_URL}/`}>Home</Link></li>
             <li className="dropdown">
-              <Link to="/Sun" className="MenuButton">Planets</Link>
+              <Link to={`${process.env.PUBLIC_URL}/Sun`} className="MenuButton">Planets</Link>
                 <ul>
-                  <li><Link to="/Sun">Sun</Link></li>
-                  <li><Link to="/Mercury">Mercury</Link></li>
-                  <li><Link to="/Venus">Venus</Link></li>
-                  <li><Link to="/Earth">Earth</Link></li>
-                  <li><Link to="/Mars">Mars</Link></li>
-                  <li><Link to="/Jupiter">Jupiter</Link></li>
-                  <li><Link to="/Saturn">Saturn</Link></li>
-                  <li><Link to="/Uranus">Uranus</Link></li>
-                  <li><Link to="/Neptun">Neptun</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Sun`}>Sun</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Mercury`}>Mercury</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Venus`}>Venus</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Earth`}>Earth</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Mars`}>Mars</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Jupiter`}>Jupiter</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Saturn`}>Saturn</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Uranus`}>Uranus</Link></li>
+                  <li><Link to={`${process.env.PUBLIC_URL}/Neptun`}>Neptun</Link></li>
                 </ul>        
             </li>
             <li><Link to="/weather">Weather</Link></li>

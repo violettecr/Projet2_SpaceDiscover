@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import SolarSystem from './Components/SolarSystem/SolarSystem';
 import Gallery from './Components/Gallery/Gallery';
 import PagePlanet from './Components/PagePlanet/PagePlanet';
@@ -9,8 +8,6 @@ import NavBar from './Components/Navbar/NavBar';
 import HomePage from './Components/HomePage/HomePage';
 import Footer from './Components/Footer/Footer';
 import './App.css';
-
-
 
 class App extends React.Component {
 
@@ -24,8 +21,7 @@ class App extends React.Component {
             <Route path="/gallery" component={Gallery} />
             <Route exact path="/solarsystem" component={SolarSystem} />
             <Route path="/:name" component={PagePlanet} />
-          </Switch>
-          
+          </Switch>  
         <Footer />
       </div>
     );

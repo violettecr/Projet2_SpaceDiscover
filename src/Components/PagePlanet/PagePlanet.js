@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 
 import './PagePlanet.css';
 
+import Planets from './Components/Planets';
+
+import mercury from './Components/planets-textures/2k_mercury.jpg';
+import venus from './Components/planets-textures/2k_venus_surface.jpg';
+import earth from './Components/planets-textures/2k_earth_daymap.jpg';
+import mars from './Components/planets-textures/2k_mars.jpg';
+import jupiter from './Components/planets-textures/2k_jupiter.jpg';
+// import saturn from './Components/planets-textures/2k_saturn.jpg';
+import uranus from './Components/planets-textures/2k_uranus.jpg';
+import neptune from './Components/planets-textures/2k_neptune.jpg';
+import moon from './Components/planets-textures/2k_neptune.jpg';
+
 const allPosts = [
   { name: 'Sun', step: "1", description: 'The Sun, or Sol,[15] is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma,[16][17] with internal convective motion that generates a magnetic field via a dynamo process.[18] It is by far the most important source of energy for life on Earth. Its diameter is about 1.39 million kilometers (864,000 miles), or 109 times that of Earth, and its mass is about 330,000 times that of Earth. It accounts for about 99.86% of the total mass of the Solar System.[19] Roughly three quarters of the Sun s mass consists of hydrogen (~73%); the rest is mostly helium (~25%), with much smaller quantities of heavier elements, including oxygen, carbon, neon, and iron.[20] The Sun is a G-type main-sequence star (G2V) based on its spectral class. As such, it is informally and not completely accurately referred to as a yellow dwarf (its light is closer to white than yellow). It formed approximately 4.6 billion[a][11][21] years ago from the gravitational collapse of matter within a region of a large molecular cloud. Most of this matter gathered in the center, whereas the rest flattened into an orbiting disk that became the Solar System. The central mass became so hot and dense that it eventually initiated nuclear fusion in its core. It is thought that almost all stars form by this process.' },
 	{ name: 'Mercury', step: "2", description: 'Mercury is the smallest and innermost planet in the Solar System. Its orbit around the Sun takes only 87.97 days, the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger of the gods. Like Venus, Mercury orbits the Sun within Earth s orbit as an inferior planet, and its apparent distance from the Sun as viewed from Earth never exceeds 28°. This proximity to the Sun means the planet can only be seen near the western horizon after sunset or eastern horizon before sunrise, usually in twilight. At this time, it may appear as a bright star-like object, but is often far more difficult to observe than Venus. The planet telescopically displays the complete range of phases, similar to Venus and the Moon, as it moves in its inner orbit relative to Earth, which recurs over its synodic period of approximately every 116 days.'},
@@ -23,23 +35,23 @@ function PagePlanet(props) {
 			case 'Sun':
 				return 'sun'
 			case 'Mercury':
-				return 'mercury'
+				return <Planets texture={mercury} />
 			case 'Moon':
-				return 'moon'
+				return <Planets texture={moon} />
 			case 'Earth':
-				return 'earth'
+				return <Planets texture={earth} />
 			case 'Venus':
-				return 'venus'
+				return <Planets texture={venus} />
 			case 'Mars':
-				return 'mars'
+				return <Planets texture={mars} />
 			case 'Jupiter':
-					return 'jupiter'
+					return <Planets texture={jupiter} />
 			case 'Saturn':
-				return 'saturn'				
+				return 'saturn'
 			case 'Uranus':
-				return 'uranus'
+				return <Planets texture={uranus} />
 			case 'Neptun':
-				return 'neptun'	
+				return <Planets texture={neptune} />
 		}
 	}
   const filteredPosts = allPosts.filter(
@@ -67,6 +79,9 @@ function PagePlanet(props) {
 					</header>
 					{
 						filteredPosts.map(post => (<p>{post.description}</p>))
+					}
+					{
+						planet()
 					}
 				</section>
 			</section>

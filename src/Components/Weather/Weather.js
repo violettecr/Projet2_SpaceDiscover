@@ -4,11 +4,22 @@ import axios from 'axios';
 
 
 function Sol(props) {
+  
+  let tmin, tmax = 0;
+
+  if(props.isCelsius){
+    tmin = ((props.tempMin - 32) * (5 / 9)).toFixed(2);
+    tmax = ((props.tempMax - 32) * (5 / 9)).toFixed(2);
+  } else {
+    tmin = props.tempMin;
+    tmax = props.tempMax;
+  }
+
   return (
     <div className="OneSol">
       <h3>{'Sol ' + props.sol}</h3>
-      <p>Min. {props.tempMin}{props.isCelsius ? ' °C' : ' °F'}</p>
-      <p>Max. {props.tempMax}{props.isCelsius ? ' °C' : ' °F'}</p>
+      <p>Min. {tmin}{props.isCelsius ? ' °C' : ' °F'}</p>
+      <p>Max. {tmax}{props.isCelsius ? ' °C' : ' °F'}</p>
     </div>
   );
 }
@@ -20,6 +31,12 @@ class Weather extends React.Component {
       sols: [],
       celsius: false
     }
+  }
+
+  handleTempChange = () => {
+    this.setState({
+      celsius: !this.state.celsius,
+    });
   }
 
   componentDidMount = () => {
@@ -51,20 +68,23 @@ class Weather extends React.Component {
 
   render(){
     return (
-      <div className="Page_Weather">
-        <div className="ActualSol">
-          <h2>MARS</h2>
-          {
-            this.state.sols.length > 0 ? <Sol sol={this.state.sols[0].solId} tempMax={this.state.sols[0].tMax} tempMin={this.state.sols[0].tMin} isCelsius={this.state.celsius} />
-            : <p>loading</p>
-          }        
-        </div>
-        <div className="Other_Sols">
-          {this.state.sols.map((sol, index) => {
-            if (index != 0){
-              return <Sol key={index} sol={sol.solId} tempMin={sol.tMin} tempMax={sol.tMax} isCelsius={this.state.celsius}/> 
-            }
-          })}
+      <div className="container-weather">
+        <div className="Page_Weather">
+          <p className="TempChoice"><span className={this.state.celsius ? "active" : ""} onClick={this.handleTempChange}>°C</span> | <span className={this.state.celsius ? "" : "active"} onClick={this.handleTempChange}>°F</span></p>
+          <div className="ActualSol">
+            <h2>MARS</h2>
+            {
+              this.state.sols.length > 0 ? <Sol sol={this.state.sols[0].solId} tempMax={this.state.sols[0].tMax} tempMin={this.state.sols[0].tMin} isCelsius={this.state.celsius} />
+              : <p>loading</p>
+            }        
+          </div>
+          <div className="Other_Sols">
+            {this.state.sols.map((sol, index) => {
+              if (index != 0){
+                return <Sol key={index} sol={sol.solId} tempMin={sol.tMin} tempMax={sol.tMax} isCelsius={this.state.celsius}/> 
+              }
+            })}
+          </div>
         </div>
       </div>
     );
@@ -73,4 +93,3 @@ class Weather extends React.Component {
 }
 
 export default Weather;
-

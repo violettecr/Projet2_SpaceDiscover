@@ -1,17 +1,24 @@
 
 /* Backgrounds Page Description Planets */
 
+#Page_planet_description.sun {
+	background-image: url("//images-assets.nasa.gov/image/GSFC_20171208_Archive_e001435/GSFC_20171208_Archive_e001435~orig.jpg");
+	background-repeat: no-repeat;
+	background-position: center 80px;
+	background-size: 40%;
+}
+#Page_planet_description.saturn {
+	background-image: url("//images-assets.nasa.gov/image/PIA11141/PIA11141~orig.jpg");
+	background-repeat: no-repeat;
+	background-position: center 80px;
+	background-size: 80%;
+}
 
-
+/* 
 #Page_planet_description.moon {
 	background-image: url("https://images-assets.nasa.gov/image/PIA00404/PIA00404~medium.jpg");
 	background-repeat: no-repeat;
 	background-position: 400%;
-}
-#Page_planet_description.sun {
-	background-image: url("https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000763/GSFC_20171208_Archive_e000763~small.jpg");
-	background-repeat: no-repeat;
-	background-position: top right;
 }
 #Page_planet_description.mercury {
 	background-image: url("https://images-assets.nasa.gov/image/PIA00437/PIA00437~medium.jpg");
@@ -19,10 +26,10 @@
 	background-position: top right;
 }
 #Page_planet_description.earth {
-    background-image: url("https://images-assets.nasa.gov/image/PIA10120/PIA10120~orig.jpg");
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 70%;
+  background-image: url("https://images-assets.nasa.gov/image/PIA10120/PIA10120~orig.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 70%;
 }
 #Page_planet_description.venus {
 	background-image: url("https://images-assets.nasa.gov/image/PIA00270/PIA00270~medium.jpg");
@@ -32,19 +39,13 @@
 #Page_planet_description.mars {
 	background-image: url("//images-assets.nasa.gov/image/PIA04591/PIA04591~orig.jpg");
 	background-repeat: no-repeat;
-    background-position: 190%;
-    background-size: 70%;
+  background-position: 190%;
+  background-size: 70%;
 }
 #Page_planet_description.jupiter {
 	background-image: url("//images-assets.nasa.gov/image/hubble-captures-vivid-auroras-in-jupiters-atmosphere_28000029525_o/hubble-captures-vivid-auroras-in-jupiters-atmosphere_28000029525_o~medium.jpg");
 	background-repeat: no-repeat;
-    background-position: 400%;
-}
-#Page_planet_description.saturn {
-	background-image: url("//images-assets.nasa.gov/image/PIA02225/PIA02225~small.jpg");
-	background-repeat: no-repeat;
-    background-position: 190%;
-    background-size: 70%;
+  background-position: 400%;
 }
 #Page_planet_description.uranus {
 	background-image: url("//images-assets.nasa.gov/image/PIA00037/PIA00037~small.jpg");
@@ -55,19 +56,26 @@
 	background-image: url("//images-assets.nasa.gov/image/PIA01492/PIA01492~medium.jpg");
 	background-repeat: no-repeat;
 	background-position: 400%;
-}
+} */
 
 /* Page Description Planets */
 
 #Page_planet_description {
 	display: flex;
-	background-color: #000;
 	text-align: left;
 }
 #Page_planet_description .ctn_planet_description {
+	position: relative;
 	display: inline-block;
 	padding: 20%;
 	margin: 0 auto;
+	width: 60%;
+}
+#Page_planet_description #background {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	left: 0;
 }
 #Page_planet_description .ctn_item_top {
 	display: flex;
@@ -99,4 +107,15 @@
 	padding: 50px 0;
 	font-family: 'Vidaloka', serif;
 	font-size: 150px;
+}
+
+@media screen and (max-width: 760px) {
+	#Page_planet_description .ctn_planet_description {
+		padding: 5%;
+			width: 80%;
+	}
+	#Page_planet_description h3 {
+		padding: 25px 0;
+		font-size: 80px;
+	}
 }
